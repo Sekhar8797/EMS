@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+    /* Custom styles */
+    .list-group-item {
+        list-style: none !important; /* Remove bullets */
+        border: none; /* Remove borders */
+    }
+
+    .card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    }
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightblue;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-left, .header-center, .header-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-left {
+    justify-content: flex-start;
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
+.logo {
+    max-height: 50px; /* Adjust based on your preference */
+}
+
+.profile-btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+.profile-btn:hover {
+    background-color: #0056b3;
+}

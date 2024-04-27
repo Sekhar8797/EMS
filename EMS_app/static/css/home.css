@@ -1,0 +1,141 @@
+/* Style for body */
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+/* Style for page title */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Style for create event button */
+.btn-primary {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Style for event links */
+a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+/* Style for delete event link */
+.delete-event {
+    color: red;
+}
+
+/* Style for horizontal line */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
+
+/* Style for spacing */
+.br {
+    margin-bottom: 20px;
+}
+
+.events-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto; /* Add overflow property here */
+    max-height: 80vh; /* Adjust maximum height as needed */
+}
+
+
+.outer-flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.event-ind-flex{
+    display: flex;
+    gap: 1rem;
+}
+
+.bold-e{
+    color: blue;
+    font-weight: bolder;
+}
+
+.bold-d{
+    color: red;
+    font-weight: bolder;
+}
+
+.event-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between; /* Space between event name and count */
+    align-items: center; /* Align items vertically */
+    margin: 10px;
+}
+
+.event-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    flex: 1; /* Let the event name take available space */
+}
+
+.registered-count {
+    font-size: 16px; /* Adjust font size if needed */
+    color: #888; /* Adjust color if needed */
+}
+
+
+.event-actions {
+    margin-top: 10px;
+}
+
+/* Optional: Adjust styling for buttons */
+.btn {
+    margin-right: 5px;
+}
+
+.btn-danger
+{
+    background-color: red;
+}
+
+.alle-header{
+    font-weight: bolder;
+    font-size: 32px;
+    margin: 0px !important;
+}
+
+/*.event-name,*/
+/*.registered-count {*/
+/*    display: inline-block;*/
+/*    vertical-align: top; !* Align elements vertically *!*/
+/*}*/
+

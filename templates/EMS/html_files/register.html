@@ -1,0 +1,26 @@
+{% extends "EMS/base.html" %}
+
+{% load static %}
+
+{% block page-title %}
+Register
+{% endblock %}
+
+{% block content-text-block %}
+<body class = "body">
+    <div class="login-box">
+    <h1> Registration Page </h1>
+        <form method="post" action="{% url 'EMS:register' %}">
+            {% csrf_token %}
+            {{ form.as_div }}
+        <button type="submit">Register</button>
+            <div class = "login-link"><a href = "{% url 'EMS:main' %}"> Return to Login </a></div>
+        </form>
+        {% if error_message %}
+            <script>
+                window.alert("{{ error_message }}");
+            </script>
+        {% endif %}
+    </div>
+</body>
+{% endblock %}

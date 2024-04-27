@@ -1,0 +1,40 @@
+{% extends "EMS/base.html" %}
+{% load static %}
+
+{% block page-title %}
+    Event Details
+{% endblock %}
+
+{% block content-text-block %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ event_name.name }}</h2>
+                        <p class="card-text">{{ event_name.description }}</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Location:</strong> {{ event_name.location }}</li>
+                            <li class="list-group-item"><strong>Start Date:</strong> {{ event_name.start_date|date:"D, d M Y H:i" }}</li>
+                            <li class="list-group-item"><strong>End Date:</strong> {{ event_name.end_date|date:"D, d M Y H:i" }}</li>
+                        </ul>
+
+                        {% if is_registered and registration_status == "registered" %}
+                            <form action="{% url 'EMS:unregister_event' registration_id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-warning">Unregister from Event</button>
+                            </form>
+                        {% elif not is_registered or registration_status == "unregistered" %}
+                            {% if request.session.role == "participant" %}
+                            <form action="{% url 'EMS:register_event' event_name.event_id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-primary">Register for Event</button>
+                            </form>
+                                {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

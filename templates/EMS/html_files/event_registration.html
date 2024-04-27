@@ -1,0 +1,20 @@
+{% extends "EMS/base.html" %}
+
+{% load static %}
+
+{% block page-title %}
+Event Registration
+{% endblock %}
+
+{% block content-text-block %}
+<body class="body">
+    <div class="event-registration-box">
+        <h1> Event Registration </h1>
+         <form method="post" action="{% url 'EMS:event_registration' %}">
+            {% csrf_token %}
+            {{ form.as_div }}
+        <button type="submit">Register Event</button>
+        </form>
+    </div>
+</body>
+{% endblock %}

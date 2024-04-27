@@ -1,0 +1,101 @@
+.body {
+    font-family: Arial;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /*background-image: url("../images/Travel_Background.jpg");*/
+}
+
+.login-box {
+    background-color: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 20vw;
+    width: 100%;
+    border-radius: 30px;
+    border: solid 1px #72491e;
+}
+
+.login-box img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 20vw;
+    margin-bottom: 0.5rem;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box input {
+    padding: 0.75rem;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+}
+
+.login-box button {
+    background-color: #72491e;
+    color: white;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #1e4722;
+}
+
+.signup-div
+{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.signup-text
+{
+    text-decoration: none;
+    /*color: var(--footer-background-color);*/
+}
+
+.radio-box-div
+{
+    display: flex;
+    gap:0.25rem;
+}
+
+.login-link
+{
+    display: flex;
+    padding-top: 0.25rem;
+    justify-content: end;
+    color: black;
+}
+
+.login-link a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.label-radio-css
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.secret-key-field {
+    display: flex;
+    flex-direction: column;
+}

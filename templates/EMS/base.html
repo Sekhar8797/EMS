@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Tripobeat | {% block page-title %} {% endblock %} </title>
+    <meta charset="utf-8">
+    <meta name="description" content="The Homepage for Tripobeat">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <!-- Below library is used for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/event_registration.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/event_edit.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}"> <!-- Add this line for header styles -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+<header class="header">
+    <div class="header-left">
+        <a href="{% url 'EMS:home_page' %}"><img src="{% static 'images/logo.png' %}" alt="EMS Logo" class="logo"></a>
+
+    </div>
+    <div class="header-center">
+        <h1>EMS</h1>
+    </div>
+    <div class="header-right">
+        <a href="{% url 'EMS:statistics' %}">
+            <button class="profile-btn">Statistics</button>
+        </a>
+        <a href="{% url 'EMS:main' %}">
+            <button class="profile-btn">Logout</button>
+        </a>
+    </div>
+</header>
+{% if messages %}
+    <ul class="message-content">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% block content-text-block %}{% endblock %}
+</body>
+</html>
